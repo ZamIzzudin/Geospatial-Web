@@ -1,0 +1,35 @@
+.card {
+    display: flex;
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+
+.thumb_card {
+    width: 40%;
+}
+
+.content_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    gap: 10px;
+}
+
+.button_card {
+    background-color: var(--orange);
+    border: 2px solid var(--orange);
+    color: var(--white);
+    padding: 10px;
+    font-family: var(--secondary);
+    border-radius: 6px;
+    font-size: .9em;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.button_card:hover {
+    background-color: var(--white);
+    color: var(--orange);
+}

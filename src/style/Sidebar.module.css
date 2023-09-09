@@ -1,0 +1,24 @@
+.sidebar {
+    background-color: white;
+    width: 30%;
+    max-height: 100vh;
+    overflow-y: scroll;
+}
+
+.sidebar::-webkit-scrollbar {
+    width: 5px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background-color: var(--grey);
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: var(--orange);
+    border-radius: 100px;
+}
+
+.place_list_container {
+    display: flex;
+    flex-direction: column;
+}
