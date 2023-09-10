@@ -6,7 +6,7 @@ import style from './style/Home.module.css'
 
 // Assets
 import Jumbo from './assets/jumbo.mp4'
-import JumboThumb from './assets/jumbo-thumb.jpg'
+import JumboThumb from './assets/jumbo-thumb.png'
 
 export default function Home() {
     return (
