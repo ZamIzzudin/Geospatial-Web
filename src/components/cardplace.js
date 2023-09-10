@@ -14,7 +14,6 @@ export default function CardPlace({ data, getSelected }) {
                     <button onClick={() => getSelected(data)} className={style.button_card}>Details</button>
                 </div>
             </div>
-            <hr className={style.border_card} />
         </>
     )
 }
