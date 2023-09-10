@@ -2,10 +2,12 @@
     display: flex;
     padding: 10px;
     border-bottom: 1px solid black;
+    align-items: center;
 }
 
 .thumb_card {
     width: 40%;
+    height: fit-content;
 }
 
 .content_card {
@@ -15,6 +17,10 @@
     width: 100%;
     padding: 10px;
     gap: 10px;
+}
+
+.content_title {
+    font-size: 1em;
 }
 
 .button_card {

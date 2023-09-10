@@ -1,5 +1,8 @@
 // Library
 import { MapContainer, TileLayer } from "react-leaflet";
+import { useSelector } from 'react-redux';
+
+import { useEffect, useState } from "react";
 
 // Components
 import Mark from './marker'
@@ -7,12 +10,20 @@ import Mark from './marker'
 // Style
 import style from '../style/MapLayout.module.css'
 
-export default function MapLayout({ setup }) {
-    // Setup data from JSON
-    const { middle, zoom_default, marks, scrollable } = setup
+export default function MapLayout() {
+    const [pre, setPre] = useState(0)
+
+    const { marks, scrollable } = useSelector((state) => state.setup.setup);
+    const { center, zoom } = useSelector(state => state.setup)
+
+    useEffect(() => {
+        // Rerender Map
+        setPre(pre + 1)
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [center, zoom])
 
     return (
-        < MapContainer MapContainer center={middle.cordinate} zoom={zoom_default} scrollWheelZoom={scrollable} className={style.map} >
+        <MapContainer key={pre} MapContainer center={center} zoom={zoom} scrollWheelZoom={scrollable} className={style.map} >
             <TileLayer
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
@@ -21,6 +32,6 @@ export default function MapLayout({ setup }) {
                     <Mark name={mark.name} lot={mark.lot} lat={mark.lat} key={index} />
                 )
             }
-        </ MapContainer>
+        </MapContainer>
     )
 }
