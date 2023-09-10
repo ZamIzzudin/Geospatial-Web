@@ -1,5 +1,5 @@
 // Library
-import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
+import { MapContainer, TileLayer, GeoJSON, Polygon } from "react-leaflet";
 import { useSelector } from 'react-redux';
 
 import { useEffect, useState } from "react";
@@ -15,10 +15,16 @@ import style from '../style/MapLayout.module.css'
 
 export default function MapLayout() {
     const overlayStyle = {
-        color: 'blue',
-        weight: 4,
+        color: 'red',
+        weight: 3,
         fill: false,
     }
+
+    const insideBoundaryCoords = changeFormat(bondary.coordinates[0][0])
+
+    const outsideBoundaryCoords = [
+        [90, -180], [90, 180], [-90, 180], [-90, -180], [90, -180]
+    ];
 
     const [pre, setPre] = useState(0)
 
@@ -46,7 +52,18 @@ export default function MapLayout() {
                 )
             }
             {/* Bondary Regional Cinere */}
+            {/* With GeoJSON */}
             <GeoJSON data={bondary} style={() => (overlayStyle)} />
+
+            {/* With Polygon Vector */}
+            <Polygon positions={[outsideBoundaryCoords, insideBoundaryCoords]} pathOptions={{ color: "black" }} />
         </MapContainer>
     )
+}
+
+// Flip Lot and Lat
+function changeFormat(cordinates) {
+    const newCordinates = cordinates.map(cordinate => [cordinate[1], cordinate[0]])
+
+    return [newCordinates]
 }

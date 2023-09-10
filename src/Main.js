@@ -6,7 +6,6 @@ import SideBar from './components/sidebar';
 import style from './style/Main.module.css'
 
 export default function Main() {
-
   return (
     <div className={style.main} >
       <SideBar />
@@ -14,3 +13,4 @@ export default function Main() {
     </div>
   );
 }
+
