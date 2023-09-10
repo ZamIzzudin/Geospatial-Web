@@ -12,7 +12,7 @@ export default function Home() {
     return (
         <div className={style.jumbotron}>
             <div className={style.jumbotron_content}>
-                <h1>SPASIALISM</h1>
+                <h1>Cinere Geo Spasial</h1>
                 <p>Make you easily to find your dreamy minimarket in Cinere</p>
                 <Link to="/map">
                     <button>Get Started</button>
