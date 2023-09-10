@@ -14,77 +14,122 @@
         {
             "name": "Alfamart Cinere 4",
             "lot": -6.330588583564260,
-            "lat": 106.7837344930640
+            "lat": 106.7837344930640,
+            "address": "Jl. Cinere Raya No.2, RT.003/RW.9, Cinere, Kec. Cinere, Kota Depok, Jawa Barat 16514",
+            "hour": "Setiap Hari Jam 07.00 - 22.00",
+            "rute": "https://goo.gl/maps/gCmrMd9qFUXfuRks8"
         },
         {
             "name": "Alfamart Cinere Raya",
             "lot": -6.3445912531582700,
-            "lat": 106.7774475530750
+            "lat": 106.7774475530750,
+            "address": "Jl. Cinere Raya No.20, RT.02/RW.12, Cinere, Kec. Limo, Kota Depok, Jawa Barat 16514",
+            "hour": "Setiap Hari Jam 07.00 - 22.00",
+            "rute": "https://goo.gl/maps/bdx9CjEaZBCdCuqt6"
         },
         {
             "name": "Alfamart Cinere Raya 5 (1M70)",
             "lot": -6.3362099692215500,
-            "lat": 106.78199657913300
+            "lat": 106.78199657913300,
+            "address": "Jl. Cinere Raya No.66, Cinere, Kec. Cinere, Kota Depok, Jawa Barat 16514",
+            "hour": "Setiap Hari Jam 06.00 - 23.00",
+            "rute": "https://goo.gl/maps/Zkg2aw6PgSuD32aGA"
         },
         {
             "name": "Alfamart Bukit Cinere",
             "lot": -6.334381639064290,
-            "lat": 106.78600722615300
+            "lat": 106.78600722615300,
+            "address": "Jl. Cinere Raya Jl. H. Rosyid No.99, RT.2/RW.1, Cinere, Kec. Cinere, Kota Depok, Jawa Barat 16514",
+            "hour": "Setiap Hari Jam 07.00 - 22.00",
+            "rute": "https://goo.gl/maps/33UT7RrgErTw57at9"
         },
         {
             "name": "Alfamart Cinere Depok 2",
             "lot": -6.34428739126258,
-            "lat": 106.77787598044900
+            "lat": 106.77787598044900,
+            "address": "Jl. Cinere Raya, Cinere, Kota Depok, Jawa Barat 16514 RT02, Cinere, Kec. Cinere, Kota Depok, Jawa Barat 16514",
+            "hour": "Setiap Hari Jam 07.00 - 22.00",
+            "rute": "https://goo.gl/maps/HnKz7ZdF2QL8b7t46"
         },
         {
             "name": "Alfamart Cendana Cinere",
             "lot": -6.329273484665370,
-            "lat": 106.78834732344900
+            "lat": 106.78834732344900,
+            "address": "Jl. Cendana, RT.04/RW.05, Cinere, Kec. Limo, Kota Depok, Jawa Barat 16514",
+            "hour": "Setiap Hari Jam 07.00 - 22.00",
+            "rute": "https://goo.gl/maps/oJBNnj2EqkH2uSE48"
         },
         {
             "name": "Alfamart Cinere Raya Lentera",
             "lot": -6.337420289338290,
-            "lat": 106.78049381619900
+            "lat": 106.78049381619900,
+            "address": "Jl. Cinere Raya No.99, Cinere, Kec. Cinere, Kota Depok, Jawa Barat 16514",
+            "hour": "Setiap Hari Jam 07.00 - 22.00",
+            "rute": "https://goo.gl/maps/uJB2m6i62nGNJpHY7"
         },
         {
             "name": "Alfamart E398 Bukit Cinere",
             "lot": -6.334093337517040,
-            "lat": 106.78409870477300
+            "lat": 106.78409870477300,
+            "address": "JL. Bukit Cinere, No. 23 Rt04 Rw 02, Kel. Cinere, Kec. Limo, Cinere, Kec. Cinere, Kota Depok, Jawa Barat 16514",
+            "hour": "Setiap Hari Jam 07.00 - 22.00",
+            "rute": "https://goo.gl/maps/5ncw7o2BX7GiEEco9"
         },
         {
             "name": "Alfamart Gandul Raya",
             "lot": -6.3407898725183600,
-            "lat": 106.79272468814600
+            "lat": 106.79272468814600,
+            "address": "Jl. Raya Gandul No.8 A, Gandul, Kec. Cinere, Kota Depok, Jawa Barat 16512",
+            "hour": "Setiap Hari Jam 07.00 - 22.00",
+            "rute": "https://goo.gl/maps/qX7JUdCJBKaxpzF78"
         },
         {
             "name": "Alfamart Gandul Raya 2",
             "lot": -6.3380358500388200,
-            "lat": 106.79458031028700
+            "lat": 106.79458031028700,
+            "address": "Jl. Raya Gandul, RT.023/RW.6, Gandul, Kec. Cinere, Kota Depok, Jawa Barat 16512",
+            "hour": "Setiap Hari Jam 07.00 - 22.00",
+            "rute": "https://goo.gl/maps/GEYH1W1RAGJBkUxq8"
         },
         {
             "name": "Alfamart Pertamina Gandul",
             "lot": -6.340318836463470,
-            "lat": 106.7944761938370
+            "lat": 106.7944761938370,
+            "address": "Jl. Pertamina Buntu, Gandul, Kec. Cinere, Kota Depok, Jawa Barat 16512",
+            "hour": "Setiap Hari Jam 07.00 - 22.00",
+            "rute": "https://goo.gl/maps/xBU9c1NEFoRfkJmV9"
         },
         {
             "name": "Alfamart Bukit Cinere 2",
             "lot": -6.333630674541860,
-            "lat": 106.78414135326000
+            "lat": 106.78414135326000,
+            "address": "Jl. Bukit Cinere Raya Blok Persatuan No.1D, Cinere, Depok City, West Java 16514",
+            "hour": "Setiap Hari Jam 07.00 - 22.00",
+            "rute": "https://goo.gl/maps/GT3J7XUE7gh2b9hw7"
         },
         {
             "name": "Alfamart JLN PLN Gandul",
             "lot": -6.340356032901490,
-            "lat": 106.79244735326000
+            "lat": 106.79244735326000,
+            "address": "Jl. PLN No.8, RW.2, Gandul, Kec. Cinere, Kota Depok, Jawa Barat 16514",
+            "hour": "Setiap Hari Jam 07.00 - 21.00",
+            "rute": "https://goo.gl/maps/uCvhAa3E6zfFjV4A9"
         },
         {
             "name": "Alfamart Cinere Raya 2",
             "lot": -6.324627222305130,
-            "lat": 106.78477050173200
+            "lat": 106.78477050173200,
+            "address": "Jl. Cinere Raya, RT.008/RW.06, Cinere, Kec. Limo, Kota Depok, Jawa Barat 16514",
+            "hour": "Setiap Hari Jam 07.00 - 21.00",
+            "rute": "https://goo.gl/maps/eXFwCWGMneybHBkj7"
         },
         {
             "name": "Sumber Alfaria Trijaya. PT (Alfamart)",
             "lot": -6.337249071540540,
-            "lat": 106.78159442994700
+            "lat": 106.78159442994700,
+            "address": "Jl. Cinere Raya No.25, Cinere, Kec. Cinere, Kota Depok, Jawa Barat 16514",
+            "hour": "Setiap Hari Jam 07.00 - 21.00",
+            "rute": "https://goo.gl/maps/cQvBDp5FHkzAf3JUA"
         }
     ]
 }
