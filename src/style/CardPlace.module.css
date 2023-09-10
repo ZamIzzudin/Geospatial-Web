@@ -1,7 +1,6 @@
 .card {
     display: flex;
     padding: 10px;
-    border-bottom: 1px solid black;
     align-items: center;
 }
 
@@ -16,7 +15,7 @@
     justify-content: space-between;
     width: 100%;
     padding: 10px;
-    gap: 10px;
+    gap: 15px;
 }
 
 .content_title {
@@ -33,9 +32,50 @@
     font-size: .9em;
     font-weight: 500;
     transition: .3s;
+    cursor: pointer;
 }
 
 .button_card:hover {
     background-color: var(--white);
     color: var(--orange);
+}
+
+.content_hour{
+  color: #202124 !important;
+  font-size: 14px;
+}
+
+.border_card{
+    border: 0.1px thin #dadce0;
+    width: 80%;
+    margin: 15px auto;
+}
+
+@media screen and (max-width: 578px){
+    .border_card{
+        margin: 0px auto;
+    }
+
+    .thumb_card {
+        width: 35%;
+        height: fit-content;
+    }
+
+    .content_title {
+        font-size: 0.9em;
+    }
+
+    .content_card {
+        gap: 3px;
+    }
+
+    .content_hour{
+        font-size: 12px;
+      }
+
+      .button_card {
+        padding: 5px;
+        border-radius: 6px;
+        font-size: .8em;
+    }
 }
