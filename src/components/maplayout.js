@@ -26,33 +26,41 @@ export default function MapLayout() {
         [90, -180], [90, 180], [-90, 180], [-90, -180], [90, -180]
     ];
 
-    const [pre, setPre] = useState(0)
+    const [map, setMap] = useState(null)
 
     const { marks, scrollable } = useSelector((state) => state.setup.setup);
     const { center, zoom } = useSelector(state => state.setup)
 
     useEffect(() => {
-        // Rerender Map
-        setPre(pre + 1)
-
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [center, zoom])
+        // Re-center Map
+        if (map) {
+            map?.setView(center, zoom)
+        }
+    }, [center, zoom, map])
 
     return (
-        <MapContainer key={pre} MapContainer center={center} zoom={zoom} scrollWheelZoom={scrollable} className={style.map} >
+        <MapContainer
+            // key={pre} 
+            MapContainer
+            center={center}
+            zoom={zoom}
+            scrollWheelZoom={scrollable}
+            className={style.map}
+            ref={setMap}
+        >
             {/* Peta Citra dari Openstreet */}
             <TileLayer
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
 
             {/* Mark untuk setiap titik alfamart */}
-            {
-                marks.map((mark, index) =>
-                    <Mark name={mark.name} lot={mark.lot} lat={mark.lat} key={index} />
-                )
-            }
+            {marks.map((mark, index) =>
+                <Mark name={mark.name} lot={mark.lot} lat={mark.lat} key={index} />
+            )}
+
             {/* Bondary Regional Cinere */}
-            {/* With GeoJSON */}
+
+            {/* GeoJSON Bondary */}
             <GeoJSON data={bondary} style={() => (overlayStyle)} />
 
             {/* With Polygon Vector */}
