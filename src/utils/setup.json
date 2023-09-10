@@ -17,7 +17,12 @@
             "lat": 106.7837344930640,
             "address": "Jl. Cinere Raya No.2, RT.003/RW.9, Cinere, Kec. Cinere, Kota Depok, Jawa Barat 16514",
             "hour": "Buka: Jam 07.00 - 22.00",
-            "rute": "https://goo.gl/maps/gCmrMd9qFUXfuRks8"
+            "rute": "https://goo.gl/maps/gCmrMd9qFUXfuRks8",
+            "images": [
+                "/assets/images/cinere_4/img_01.jpg",
+                "/assets/images/cinere_4/img_02.jpg",
+                "/assets/images/cinere_4/img_03.jpg"
+            ]
 
         },
         {
@@ -26,7 +31,12 @@
             "lat": 106.7774475530750,
             "address": "Jl. Cinere Raya No.20, RT.02/RW.12, Cinere, Kec. Limo, Kota Depok, Jawa Barat 16514",
             "hour": "Buka: Jam 07.00 - 22.00",
-            "rute": "https://goo.gl/maps/bdx9CjEaZBCdCuqt6"
+            "rute": "https://goo.gl/maps/bdx9CjEaZBCdCuqt6",
+            "images": [
+                "/assets/images/cinere_raya/img_01.jpg",
+                "/assets/images/cinere_raya/img_02.jpg",
+                "/assets/images/cinere_raya/img_03.jpg"
+            ]
         },
         {
             "name": "Alfamart Cinere Raya 5 (1M70)",
@@ -34,7 +44,12 @@
             "lat": 106.78199657913300,
             "address": "Jl. Cinere Raya No.66, Cinere, Kec. Cinere, Kota Depok, Jawa Barat 16514",
             "hour": "Buka: Jam 06.00 - 23.00",
-            "rute": "https://goo.gl/maps/Zkg2aw6PgSuD32aGA"
+            "rute": "https://goo.gl/maps/Zkg2aw6PgSuD32aGA",
+            "images": [
+                "/assets/images/cinere_raya_5/img_01.jpg",
+                "/assets/images/cinere_raya_5/img_02.jpg",
+                "/assets/images/cinere_raya_5/img_03.jpg"
+            ]
         },
         {
             "name": "Alfamart Bukit Cinere",
@@ -42,7 +57,12 @@
             "lat": 106.78600722615300,
             "address": "Jl. Cinere Raya Jl. H. Rosyid No.99, RT.2/RW.1, Cinere, Kec. Cinere, Kota Depok, Jawa Barat 16514",
             "hour": "Buka: Jam 07.00 - 22.00",
-            "rute": "https://goo.gl/maps/33UT7RrgErTw57at9"
+            "rute": "https://goo.gl/maps/33UT7RrgErTw57at9",
+            "images": [
+                "/assets/images/bukit_cinere/img_01.jpg",
+                "/assets/images/bukit_cinere/img_02.jpg",
+                "/assets/images/bukit_cinere/img_03.jpg"
+            ]
         },
         {
             "name": "Alfamart Cinere Depok 2",
@@ -50,7 +70,12 @@
             "lat": 106.77787598044900,
             "address": "Jl. Cinere Raya, Cinere, Kota Depok, Jawa Barat 16514 RT02, Cinere, Kec. Cinere, Kota Depok, Jawa Barat 16514",
             "hour": "Buka: Jam 07.00 - 22.00",
-            "rute": "https://goo.gl/maps/HnKz7ZdF2QL8b7t46"
+            "rute": "https://goo.gl/maps/HnKz7ZdF2QL8b7t46",
+            "images": [
+                "/assets/images/cinere_depok_2/img_01.jpg",
+                "/assets/images/cinere_depok_2/img_02.jpg",
+                "/assets/images/cinere_depok_2/img_03.jpg"
+            ]
         },
         {
             "name": "Alfamart Cendana Cinere",
@@ -58,7 +83,12 @@
             "lat": 106.78834732344900,
             "address": "Jl. Cendana, RT.04/RW.05, Cinere, Kec. Limo, Kota Depok, Jawa Barat 16514",
             "hour": "Buka: Jam 07.00 - 22.00",
-            "rute": "https://goo.gl/maps/oJBNnj2EqkH2uSE48"
+            "rute": "https://goo.gl/maps/oJBNnj2EqkH2uSE48",
+            "images": [
+                "/assets/images/cendana_cinere/img_01.jpg",
+                "/assets/images/cendana_cinere/img_02.jpg",
+                "/assets/images/cendana_cinere/img_03.jpg"
+            ]
         },
         {
             "name": "Alfamart Cinere Raya Lentera",
@@ -66,7 +96,12 @@
             "lat": 106.78049381619900,
             "address": "Jl. Cinere Raya No.99, Cinere, Kec. Cinere, Kota Depok, Jawa Barat 16514",
             "hour": "Buka: Jam 07.00 - 22.00",
-            "rute": "https://goo.gl/maps/uJB2m6i62nGNJpHY7"
+            "rute": "https://goo.gl/maps/uJB2m6i62nGNJpHY7",
+            "images": [
+                "/assets/images/cinere_raya_lentera/img_01.jpg",
+                "/assets/images/cinere_raya_lentera/img_02.jpg",
+                "/assets/images/cinere_raya_lentera/img_03.jpg"
+            ]
         },
         {
             "name": "Alfamart E398 Bukit Cinere",
@@ -74,7 +109,12 @@
             "lat": 106.78409870477300,
             "address": "JL. Bukit Cinere, No. 23 Rt04 Rw 02, Kel. Cinere, Kec. Limo, Cinere, Kec. Cinere, Kota Depok, Jawa Barat 16514",
             "hour": "Buka: Jam 07.00 - 22.00",
-            "rute": "https://goo.gl/maps/5ncw7o2BX7GiEEco9"
+            "rute": "https://goo.gl/maps/5ncw7o2BX7GiEEco9",
+            "images": [
+                "/assets/images/e398_bukit_cinere/img_01.jpg",
+                "/assets/images/e398_bukit_cinere/img_02.jpg",
+                "/assets/images/e398_bukit_cinere/img_03.jpg"
+            ]
         },
         {
             "name": "Alfamart Gandul Raya",
@@ -82,7 +122,12 @@
             "lat": 106.79272468814600,
             "address": "Jl. Raya Gandul No.8 A, Gandul, Kec. Cinere, Kota Depok, Jawa Barat 16512",
             "hour": "Buka: Jam 07.00 - 22.00",
-            "rute": "https://goo.gl/maps/qX7JUdCJBKaxpzF78"
+            "rute": "https://goo.gl/maps/qX7JUdCJBKaxpzF78",
+            "images": [
+                "/assets/images/gandul_raya/img_01.jpg",
+                "/assets/images/gandul_raya/img_02.jpg",
+                "/assets/images/gandul_raya/img_03.jpg"
+            ]
         },
         {
             "name": "Alfamart Gandul Raya 2",
@@ -90,7 +135,12 @@
             "lat": 106.79458031028700,
             "address": "Jl. Raya Gandul, RT.023/RW.6, Gandul, Kec. Cinere, Kota Depok, Jawa Barat 16512",
             "hour": "Buka: Jam 07.00 - 22.00",
-            "rute": "https://goo.gl/maps/GEYH1W1RAGJBkUxq8"
+            "rute": "https://goo.gl/maps/GEYH1W1RAGJBkUxq8",
+            "images": [
+                "/assets/images/gandul_raya_2/img_01.jpg",
+                "/assets/images/gandul_raya_2/img_02.jpg",
+                "/assets/images/gandul_raya_2/img_03.jpg"
+            ]
         },
         {
             "name": "Alfamart Pertamina Gandul",
@@ -98,7 +148,12 @@
             "lat": 106.7944761938370,
             "address": "Jl. Pertamina Buntu, Gandul, Kec. Cinere, Kota Depok, Jawa Barat 16512",
             "hour": "Buka: Jam 07.00 - 22.00",
-            "rute": "https://goo.gl/maps/xBU9c1NEFoRfkJmV9"
+            "rute": "https://goo.gl/maps/xBU9c1NEFoRfkJmV9",
+            "images": [
+                "/assets/images/pertamina_gandul/img_01.jpg",
+                "/assets/images/pertamina_gandul/img_02.jpg",
+                "/assets/images/pertamina_gandul/img_03.jpg"
+            ]
         },
         {
             "name": "Alfamart Bukit Cinere 2",
@@ -106,7 +161,12 @@
             "lat": 106.78414135326000,
             "address": "Jl. Bukit Cinere Raya Blok Persatuan No.1D, Cinere, Depok City, West Java 16514",
             "hour": "Buka: Jam 07.00 - 22.00",
-            "rute": "https://goo.gl/maps/GT3J7XUE7gh2b9hw7"
+            "rute": "https://goo.gl/maps/GT3J7XUE7gh2b9hw7",
+            "images": [
+                "/assets/images/bukit_cinere_2/img_01.jpg",
+                "/assets/images/bukit_cinere_2/img_02.jpg",
+                "/assets/images/bukit_cinere_2/img_03.jpg"
+            ]
         },
         {
             "name": "Alfamart JLN PLN Gandul",
@@ -114,7 +174,12 @@
             "lat": 106.79244735326000,
             "address": "Jl. PLN No.8, RW.2, Gandul, Kec. Cinere, Kota Depok, Jawa Barat 16514",
             "hour": "Buka: Jam 07.00 - 21.00",
-            "rute": "https://goo.gl/maps/uCvhAa3E6zfFjV4A9"
+            "rute": "https://goo.gl/maps/uCvhAa3E6zfFjV4A9",
+            "images": [
+                "/assets/images/jln_pln_gandul/img_01.jpg",
+                "/assets/images/jln_pln_gandul/img_02.jpg",
+                "/assets/images/jln_pln_gandul/img_03.jpg"
+            ]
         },
         {
             "name": "Alfamart Cinere Raya 2",
@@ -122,7 +187,12 @@
             "lat": 106.78477050173200,
             "address": "Jl. Cinere Raya, RT.008/RW.06, Cinere, Kec. Limo, Kota Depok, Jawa Barat 16514",
             "hour": "Buka: Jam 07.00 - 21.00",
-            "rute": "https://goo.gl/maps/eXFwCWGMneybHBkj7"
+            "rute": "https://goo.gl/maps/eXFwCWGMneybHBkj7",
+            "images": [
+                "/assets/images/cinere_raya_2/img_01.jpg",
+                "/assets/images/cinere_raya_2/img_02.jpg",
+                "/assets/images/cinere_raya_2/img_03.jpg"
+            ]
         },
         {
             "name": "Sumber Alfaria Trijaya. PT (Alfamart)",
@@ -130,7 +200,12 @@
             "lat": 106.78159442994700,
             "address": "Jl. Cinere Raya No.25, Cinere, Kec. Cinere, Kota Depok, Jawa Barat 16514",
             "hour": "Buka: Jam 07.00 - 21.00",
-            "rute": "https://goo.gl/maps/cQvBDp5FHkzAf3JUA"
+            "rute": "https://goo.gl/maps/cQvBDp5FHkzAf3JUA",
+            "images": [
+                "/assets/images/alfaria_trijaya/img_01.jpg",
+                "/assets/images/alfaria_trijaya/img_02.jpg",
+                "/assets/images/alfaria_trijaya/img_03.jpg"
+            ]
         }
     ]
 }

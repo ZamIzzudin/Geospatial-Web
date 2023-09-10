@@ -5,7 +5,6 @@ import { useMediaQuery } from 'react-responsive';
 import CardPlace from './cardplace';
 import { setCenter, setZoom } from '../store/setupSlice';
 
-import Thumb from '../assets/thumb.jpeg';
 import Arrow from '../assets/arrow-left-white.svg';
 import MenuIcon from '@mui/icons-material/Menu';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
@@ -55,16 +54,17 @@ export default function SideBar() {
             {selected ? (
                 <section className={style.place_list_container}>
                     {isResponsive ? (
+                    <>
                         <div className={`${style.content_information} ${hide ? style.hide : ''}`}>
                             <div style={{position: 'relative'}}>
                             <button className={style.back_button} style={{top: '15px'}} onClick={() => {removeSelected(); setExpand(true)}}>
                                 <img src={Arrow} alt="arrow icon" />
                             </button>
+                            </div>
                                 <button className={`${style.content_back_button} ${hide ? style.hide : ''}`} onClick={() => {setHide(!hide); setExpand(!expand)}}>
                                     <img src={Arrow} alt="arrow icon" />
                                 </button>
-                            </div>
-                            <img src={Thumb} alt="thumb-detail" />
+                            <img src={selected.images[0]} alt="thumb-detail" />
 
                             <div className={style.place_information}>
                                 <div className={style.base_info}>
@@ -88,18 +88,24 @@ export default function SideBar() {
                                         <a rel='noreferrer' target="_blank" href={selected.rute}>Lihat rute disini</a>
                                     </li>
                                 </ul>
+                                
                                 <div className={style.place_photo_section}>
                                 <p>Foto</p>
-                                {/* Map Photo */}
+                                <div className={style.images_container}>
+                                    {selected.images?.map((image) => (
+                                        <img key={image} src={image} alt="thumb-detail" />
+                                    ))}
+                                </div>
                                 </div>
                             </div>
                         </div>
+                    </>
                     ): (
                         <>
                             <button className={style.back_button} onClick={() => {removeSelected(); setExpand(true)}}>
                                 <img src={Arrow} alt="arrow icon" />
                             </button>
-                            <img src={Thumb} alt="thumb-detail" />
+                            <img src={selected.images[0]} alt="thumb-detail" />
                             <div className={style.place_information}>
                                 <div className={style.base_info}>
                                     <p>{selected.name}</p>
@@ -125,6 +131,11 @@ export default function SideBar() {
                                 <div className={style.place_photo_section}>
                                 <p>Foto</p>
                                 {/* Map Photo */}
+                                <div className={style.images_container}>
+                                    {selected.images?.map((image) => (
+                                        <img key={image} src={image} alt="thumb-detail" />
+                                    ))}
+                                </div>
                                 </div>
                             </div>
                         </>
@@ -140,7 +151,11 @@ export default function SideBar() {
 
                             <div className={`${style.content} ${expand ? style.show : ''}`}>
                                 {marks.map((mark, index) => (
-                                    <CardPlace data={mark} key={index} getSelected={getSelected} />
+                                    <>
+
+                                     <CardPlace data={mark} key={index} getSelected={getSelected} />
+                                     {console.info(mark)}
+                                    </>
                                 ))}
                             </div>
                         </>
