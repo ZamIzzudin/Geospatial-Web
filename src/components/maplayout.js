@@ -15,8 +15,8 @@ import style from '../style/MapLayout.module.css'
 
 export default function MapLayout() {
     const overlayStyle = {
-        color: 'red',
-        weight: 3,
+        color: 'var(--orange)',
+        weight: 4,
         fill: false,
     }
 
@@ -60,11 +60,11 @@ export default function MapLayout() {
 
             {/* Bondary Regional Cinere */}
 
-            {/* GeoJSON Bondary */}
-            <GeoJSON data={bondary} style={() => (overlayStyle)} />
-
             {/* With Polygon Vector */}
             <Polygon positions={[outsideBoundaryCoords, insideBoundaryCoords]} pathOptions={{ color: "black" }} />
+
+            {/* GeoJSON Bondary */}
+            <GeoJSON data={bondary} style={() => (overlayStyle)} />
         </MapContainer>
     )
 }

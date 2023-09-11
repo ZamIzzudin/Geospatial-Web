@@ -3,10 +3,11 @@
     padding: 10px;
     align-items: center;
     border-bottom: 1px solid #dadce0;
+    flex-direction: column;
 }
 
 .thumb_card {
-    width: 45%;
+    width: 100%;
     height: 20vh;
     background-size: cover;
 }
@@ -54,17 +55,8 @@
 }
 
 @media screen and (max-width: 578px) {
-    .card {
-        flex-direction: column;
-    }
-
     .border_card {
         margin: 0px auto;
-    }
-
-    .thumb_card {
-        width: 100%;
-        height: 20vh;
     }
 
     .content_title {
