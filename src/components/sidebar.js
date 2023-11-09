@@ -20,7 +20,7 @@ export default function SideBar() {
     const [selected, setSelected] = useState(null);
     const [expand, setExpand] = useState(false);
     const [hide, setHide] = useState(false);
-    const sidebarRef = useRef(null); 
+    const sidebarRef = useRef(null);
 
     // Responsive
     const isResponsive = useMediaQuery({ maxWidth: 992 });
@@ -54,88 +54,88 @@ export default function SideBar() {
             {selected ? (
                 <section className={style.place_list_container}>
                     {isResponsive ? (
-                    <>
-                        <div className={`${style.content_information} ${hide ? style.hide : ''}`}>
-                            <div style={{position: 'relative'}}>
-                            <button className={style.back_button} style={{top: '15px'}} onClick={() => {removeSelected(); setExpand(true)}}>
-                                <img src={Arrow} alt="arrow icon" />
-                            </button>
-                            </div>
-                                <button className={`${style.content_back_button} ${hide ? style.hide : ''}`} onClick={() => {setHide(!hide); setExpand(!expand)}}>
+                        <>
+                            <div className={`${style.content_information} ${hide ? style.hide : ''}`}>
+                                <div style={{ position: 'relative' }}>
+                                    <button className={style.back_button} style={{ top: '15px' }} onClick={() => { removeSelected(); setExpand(true) }}>
+                                        <img src={Arrow} alt="arrow icon" />
+                                    </button>
+                                </div>
+                                <button className={`${style.content_back_button} ${hide ? style.hide : ''}`} onClick={() => { setHide(!hide); setExpand(!expand) }}>
                                     <img src={Arrow} alt="arrow icon" />
                                 </button>
-                            <img src={selected.images[0]} alt="thumb-detail" />
+                                <img src={selected.images[0]} alt="thumb-detail" />
 
-                            <div className={style.place_information}>
-                                <div className={style.base_info}>
-                                    <p>{selected.name}</p>
-                                    <div style={{display: 'flex',flexDirection: 'column', gap: '5px'}}>
-                                        <span>Minimarket</span>
-                                        <span>{selected.hour}</span>
+                                <div className={style.place_information}>
+                                    <div className={style.base_info}>
+                                        <p>{selected.name}</p>
+                                        <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
+                                            <span>Minimarket</span>
+                                            <span>{selected.hour}</span>
+                                        </div>
+                                    </div>
+                                    <ul className={style.place_more_info}>
+                                        <li>
+                                            <LocationOnIcon sx={{ color: '#FF9505', width: '32px' }} />
+                                            <span>{selected.address}</span>
+                                        </li>
+                                        <li>
+                                            <MapIcon sx={{ color: '#FF9505', width: '32px' }} />
+                                            <span>{`Lot: ${selected.lot}, Lat: ${selected.lat}`}</span>
+                                        </li>
+                                        <li>
+                                            <DirectionsIcon sx={{ color: '#FF9505', width: '32px' }} />
+                                            <a rel='noreferrer' target="_blank" href={selected.rute}>Lihat rute disini</a>
+                                        </li>
+                                    </ul>
+
+                                    <div className={style.place_photo_section}>
+                                        <p>Foto</p>
+                                        <div className={style.images_container}>
+                                            {selected.images?.map((image) => (
+                                                <img key={image} src={image} alt="thumb-detail" />
+                                            ))}
+                                        </div>
                                     </div>
                                 </div>
-                                <ul className={style.place_more_info}>
-                                    <li>
-                                        <LocationOnIcon sx={{ color: '#FF9505', width: '32px'}} />
-                                        <span>{selected.address}</span>
-                                    </li>
-                                    <li>
-                                        <MapIcon sx={{ color: '#FF9505', width: '32px'}} />
-                                        <span>{`Lot: ${selected.lot}, Lat: ${selected.lat}`}</span>
-                                    </li>
-                                    <li>
-                                        <DirectionsIcon sx={{ color: '#FF9505', width: '32px'}} />
-                                        <a rel='noreferrer' target="_blank" href={selected.rute}>Lihat rute disini</a>
-                                    </li>
-                                </ul>
-                                
-                                <div className={style.place_photo_section}>
-                                <p>Foto</p>
-                                <div className={style.images_container}>
-                                    {selected.images?.map((image) => (
-                                        <img key={image} src={image} alt="thumb-detail" />
-                                    ))}
-                                </div>
-                                </div>
                             </div>
-                        </div>
-                    </>
-                    ): (
+                        </>
+                    ) : (
                         <>
-                            <button className={style.back_button} onClick={() => {removeSelected(); setExpand(true)}}>
+                            <button className={style.back_button} onClick={() => { removeSelected(); setExpand(true) }}>
                                 <img src={Arrow} alt="arrow icon" />
                             </button>
                             <img src={selected.images[0]} alt="thumb-detail" />
                             <div className={style.place_information}>
                                 <div className={style.base_info}>
                                     <p>{selected.name}</p>
-                                    <div style={{display: 'flex',flexDirection: 'column', gap: '5px'}}>
+                                    <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
                                         <span>Minimarket</span>
                                         <span>{selected.hour}</span>
                                     </div>
                                 </div>
                                 <ul className={style.place_more_info}>
                                     <li>
-                                        <LocationOnIcon sx={{ color: '#FF9505', width: '32px'}} />
+                                        <LocationOnIcon sx={{ color: '#FF9505', width: '32px' }} />
                                         <span>{selected.address}</span>
                                     </li>
                                     <li>
-                                        <MapIcon sx={{ color: '#FF9505', width: '32px'}} />
+                                        <MapIcon sx={{ color: '#FF9505', width: '32px' }} />
                                         <span>{`Lot: ${selected.lot}, Lat: ${selected.lat}`}</span>
                                     </li>
                                     <li>
-                                        <DirectionsIcon sx={{ color: '#FF9505', width: '32px'}} />
+                                        <DirectionsIcon sx={{ color: '#FF9505', width: '32px' }} />
                                         <a href={selected.rute}>Lihat rute disini</a>
                                     </li>
                                 </ul>
                                 <div className={style.place_photo_section}>
-                                <p>Foto</p>
-                                {/* Map Photo */}
-                                <div className={style.images_container}>
-                                    {selected.images?.map((image) => (
-                                        <img key={image} src={image} alt="thumb-detail" />
-                                    ))}
-                                </div>
+                                    <p>Foto</p>
+                                    {/* Map Photo */}
+                                    <div className={style.images_container}>
+                                        {selected.images?.map((image) => (
+                                            <img key={image} src={image} alt="thumb-detail" />
+                                        ))}
+                                    </div>
                                 </div>
                             </div>
                         </>
@@ -150,17 +150,17 @@ export default function SideBar() {
                             </div>
 
                             <div className={`${style.content} ${expand ? style.show : ''}`}>
-                                {marks.map((mark, index) => (
-                                    <>
-
-                                     <CardPlace data={mark} key={index} getSelected={getSelected} />
-                                     {console.info(mark)}
-                                    </>
-                                ))}
+                                {
+                                    marks.map((mark, index) =>
+                                        <CardPlace data={mark} key={index} getSelected={getSelected} />
+                                    )
+                                }
                             </div>
                         </>
                     ) : (
-                        marks.map((mark, index) => <CardPlace data={mark} key={index} getSelected={getSelected} />)
+                        marks.map((mark, index) =>
+                            <CardPlace data={mark} key={index} getSelected={getSelected} />
+                        )
                     )}
                 </section>
             )}

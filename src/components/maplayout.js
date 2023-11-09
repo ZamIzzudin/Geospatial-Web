@@ -55,7 +55,7 @@ export default function MapLayout() {
 
             {/* Mark untuk setiap titik alfamart */}
             {marks.map((mark, index) =>
-                <Mark name={mark.name} lot={mark.lot} lat={mark.lat} key={index} />
+                <Mark data={mark} key={index} />
             )}
 
             {/* Bondary Regional Cinere */}
