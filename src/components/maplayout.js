@@ -1,5 +1,5 @@
 // Library
-import { MapContainer, TileLayer, GeoJSON, Polygon } from "react-leaflet";
+import { MapContainer, GeoJSON, Polygon } from "react-leaflet";
 import { useSelector } from 'react-redux';
 
 import { useEffect, useState } from "react";
@@ -9,6 +9,9 @@ import Mark from './marker'
 
 // Utils
 import bondary from '../utils/cinereBondary.json'
+import MapLayerControl from "./mapLayerControl";
+import MinimapControl from "./minimap";
+
 
 // Style
 import style from '../style/MapLayout.module.css'
@@ -38,6 +41,7 @@ export default function MapLayout() {
         }
     }, [center, zoom, map])
 
+
     return (
         <MapContainer
             // key={pre} 
@@ -48,10 +52,9 @@ export default function MapLayout() {
             className={style.map}
             ref={setMap}
         >
-            {/* Peta Citra dari Openstreet */}
-            <TileLayer
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            />
+            {/* Kontrol TileLayer Map */}
+            <MapLayerControl />
+            <MinimapControl position="bottomright" />
 
             {/* Mark untuk setiap titik alfamart */}
             {marks.map((mark, index) =>
