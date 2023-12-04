@@ -4,7 +4,7 @@ import { Avatar } from '@mui/material'
 
 import profile1 from '../assets/user1.png'
 import profile2 from '../assets/user2.jpg'
-import profile3 from '../assets/cewe-wildan.png'
+import profile3 from '../assets/user3.jpg'
 
 import { useMediaQuery } from 'react-responsive'
 
