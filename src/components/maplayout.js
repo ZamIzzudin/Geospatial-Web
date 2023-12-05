@@ -1,5 +1,5 @@
 // Library
-import { MapContainer, GeoJSON, Polygon } from "react-leaflet";
+import { MapContainer, GeoJSON, Polygon, Popup } from "react-leaflet";
 import { useSelector } from 'react-redux';
 
 import { useEffect, useState } from "react";
@@ -9,9 +9,11 @@ import Mark from './marker'
 
 // Utils
 import bondary from '../utils/cinereBondary.json'
-import MapLayerControl from "./mapLayerControl";
-import MinimapControl from "./minimap";
-
+import streets from '../utils/jalanRaya.json'
+import river from '../utils/kali.json'
+// import highway from '../utils/tol.json'
+import MapLayerControl from "./mapLayerControl"
+import MinimapControl from "./minimap"
 
 // Style
 import style from '../style/MapLayout.module.css'
@@ -22,6 +24,25 @@ export default function MapLayout() {
         weight: 4,
         fill: false,
     }
+
+    const streetStyle = {
+        color: 'rgba(64,64,64,1)',
+        weight: 4,
+        fill: false,
+    }
+
+    const riverStyle = {
+        color: 'rgba(0,102,204,0.5)',
+        weight: 4,
+        fill: false,
+    }
+
+    // const highwayStyle = {
+    //     color: 'green',
+    //     weight: 4,
+    //     fill: false,
+    // }
+
 
     const insideBoundaryCoords = changeFormat(bondary.coordinates[0][0])
 
@@ -68,6 +89,29 @@ export default function MapLayout() {
 
             {/* GeoJSON Bondary */}
             <GeoJSON data={bondary} style={() => (overlayStyle)} />
+
+            {/* Big Street */}
+            {streets.map(street => (
+                <GeoJSON data={street} style={() => (streetStyle)}>
+                    <Popup>
+                        {street.name}
+                    </Popup>
+                </GeoJSON>
+            ))}
+
+            {/* River */}
+            <GeoJSON data={river} style={() => (riverStyle)} >
+                <Popup>
+                    {river.name}
+                </Popup>
+            </GeoJSON>
+
+            {/* Highway */}
+            {/* <GeoJSON data={highway}> style={() => (highwayStyle)}
+                <Popup>
+                    {highway.name}
+                </Popup>
+            </GeoJSON> */}
         </MapContainer>
     )
 }
