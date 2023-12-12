@@ -1,7 +1,7 @@
 import { LayersControl, TileLayer } from "react-leaflet";
 export default function MapLayerControl() {
     return (
-        <LayersControl position="topright">
+        <LayersControl position="topleft">
             <LayersControl.BaseLayer checked name="Default">
                 <TileLayer
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

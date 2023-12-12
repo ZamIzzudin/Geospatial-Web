@@ -10,6 +10,7 @@ import Arrow from '../assets/arrow-left-white.svg';
 import MenuIcon from '@mui/icons-material/Menu';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import DirectionsIcon from '@mui/icons-material/Directions';
+import SearchIcon from '@mui/icons-material/Search';
 import MapIcon from '@mui/icons-material/Map';
 
 import style from '../style/Sidebar.module.css';
@@ -21,7 +22,16 @@ export default function SideBar() {
 
     const [expand, setExpand] = useState(false);
     const [hide, setHide] = useState(false);
+    const [searchActive, setSearchActive] = useState(false);
     const sidebarRef = useRef(null);
+    const searchRef = useRef(null);
+
+    const[dataFiltered, setDataFiltered] = useState(marks);
+
+    const handleFilter = (text) => {
+        const filter = marks.filter(mark => mark.name.toLowerCase().includes(text.toLowerCase()));
+        setDataFiltered(filter);
+    }
 
     // Responsive
     const isResponsive = useMediaQuery({ maxWidth: 992 });
@@ -50,8 +60,28 @@ export default function SideBar() {
         };
     }, []);
 
+    useEffect(() => {
+        function handleClickOutside(event) {
+            if (searchRef.current && !searchRef.current.contains(event.target)) {
+                setSearchActive(false);
+            }
+        }
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
+
     return (
         <aside className={style.sidebar} ref={sidebarRef}>
+            <div className={style.searchBar_container} ref={searchRef}>
+                <div className={`${style.searchForm} ${searchActive ? style.active : ''}`}>
+                    <input type="text" name="text" placeholder='Search' onKeyUp={(e) => handleFilter(e.target.value)} />
+                    <div className={style.searchIcon_container} onClick={() => setSearchActive(!searchActive)}>
+                        <SearchIcon className={style.searchIcon} sx={{ color: '#9E9E9E', fontSize: '28px' }} />
+                    </div>
+                </div>
+            </div>
             {dataSelected ? (
                 <section className={style.place_list_container}>
                     {isResponsive ? (
@@ -159,7 +189,7 @@ export default function SideBar() {
                             </div>
                         </>
                     ) : (
-                        marks.map((mark, index) =>
+                        dataFiltered.map((mark, index) =>
                             <CardPlace data={mark} key={index} getSelected={getSelected} />
                         )
                     )}

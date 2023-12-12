@@ -222,3 +222,54 @@
     gap: 25px;
     padding-top: 15px;
 }
+
+.searchBar_container{
+    position: absolute;
+    right: 15px;
+    top: 12px;
+}
+
+.searchForm{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.searchIcon_container{
+    background-color: #fff;
+    padding: 8px;
+    display: grid;
+    place-content: center;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 2px solid rgba(0,0,0,0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.searchIcon_container:hover{
+    background-color: #f5f5f5;
+}
+
+.searchForm input {
+    max-width: 0;
+    height: 45px;
+    border-radius: 18px;
+    border: 2px solid rgba(0,0,0,0.2);
+    transition: all 0.3s ease-in-out;
+    transform: translateX(50px);
+    z-index: -1;
+ }
+ 
+ .searchForm.active input {
+     max-width: 300px;
+     padding: 0 25px;
+     transform: translateX(0);
+     z-index: 1;
+ }
+ 
+
+.searchForm input:focus {
+ outline: none;
+}
