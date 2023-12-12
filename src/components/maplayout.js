@@ -1,6 +1,8 @@
 // Library
 import { MapContainer, GeoJSON, Polygon, Popup } from "react-leaflet";
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { setCenter, setZoom } from '../store/setupSlice';
+import { setDataSelected } from "../store/selectedDataSlice";
 
 import { useEffect, useState } from "react";
 
@@ -14,6 +16,7 @@ import river from '../utils/kali.json'
 // import highway from '../utils/tol.json'
 import MapLayerControl from "./mapLayerControl"
 import MinimapControl from "./minimap"
+import MouseCoordinates from "./mouseCoordinate";
 
 // Style
 import style from '../style/MapLayout.module.css'
@@ -51,9 +54,16 @@ export default function MapLayout() {
     ];
 
     const [map, setMap] = useState(null)
+    const dispatch = useDispatch();
 
     const { marks, scrollable } = useSelector((state) => state.setup.setup);
     const { center, zoom } = useSelector(state => state.setup)
+
+    function getSelected(value) {
+        dispatch(setDataSelected(value));
+        dispatch(setCenter([value.lot, value.lat]));
+        dispatch(setZoom(18));
+    }
 
     useEffect(() => {
         // Re-center Map
@@ -73,13 +83,20 @@ export default function MapLayout() {
             className={style.map}
             ref={setMap}
         >
+            {/* Show Coordinate alongside cursor */}
+            <div className="leaflet-bottom leaflet-left"> 
+                <MouseCoordinates />
+            </div>
+
             {/* Kontrol TileLayer Map */}
             <MapLayerControl />
-            <MinimapControl position="bottomright" />
+
+            {/* Kontrol Minimap */}
+            <MinimapControl position="bottomright" zoom={zoom} />
 
             {/* Mark untuk setiap titik alfamart */}
             {marks.map((mark, index) =>
-                <Mark data={mark} key={index} />
+                <Mark data={mark} key={index} getSelected={getSelected}  />
             )}
 
             {/* Bondary Regional Cinere */}
