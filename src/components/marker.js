@@ -1,5 +1,8 @@
 import { Marker, Popup } from "react-leaflet"
-import markerIconPng from "../assets/mark.png"
+// import markerIconPng from "../assets/mark.png"
+import markerIconPng from "../assets/mark2.png"
+// import markerIconPng from "../assets/mark3.png"
+
 import CardPlace from './cardplace'
 import { Icon } from 'leaflet'
 
@@ -12,8 +15,8 @@ export default function Mark({ data, getSelected }) {
     return (
         <Marker position={[lot, lat]} icon={new Icon({ iconUrl: markerIconPng, iconSize: [41, 41], iconAnchor: [12, 41] })}>
             <Popup>
-                { dataSelected ? <CardPlace data={data} getSelected={getSelected} popup={true} /> : <CardPlace data={data} getSelected={getSelected} /> }
-                
+                {dataSelected ? <CardPlace data={data} getSelected={getSelected} popup={true} /> : <CardPlace data={data} getSelected={getSelected} />}
+
             </Popup>
         </Marker>
     )

@@ -36,7 +36,11 @@ export default function Home() {
                 <div className={style.content_layout}>
                     <div className={style.content_layout_1}>
                         <h2>YOU DEFINITELY NEED THIS.</h2>
-                        <p>Cause We Will Guide You to Find Nearest Alfamart in CINERE to Satisfy Your Desires.</p>
+                        <p style={{ fontSize: '16px' }}>Alfamart, sebuah oase belanja yang memikat hati dengan pesonanya yang tak terbantahkan, menghadirkan pengalaman berbelanja yang tak terlupakan. Sebagai supermarket pilihan, Alfamart bukan sekadar toko, melainkan teman setia dalam menjalani kehidupan sehari-hari.
+                            Apa yang membuat Alfamart begitu istimewa? Pertama-tama, kepraktisan tanpa tanding.</p>
+                        <br />
+                        <p style={{ fontSize: '16px' }}>Alfamart tersebar di seluruh penjuru kota, memastikan bahwa kenyamanan selalu dalam genggaman. Dengan desain toko yang modern dan terorganisir, berbelanja di Alfamart tidak hanya menjadi keharusan tetapi juga kegembiraan.
+                            Tak hanya itu, Alfamart menonjolkan komitmen terhadap kualitas produk. Rak-raknya dipenuhi dengan ragam barang berkualitas tinggi, dari kebutuhan sehari-hari hingga produk-produk segar yang menggoda lidah. Dengan menyediakan pilihan terbaik, Alfamart menjadi pilihan utama bagi mereka yang menghargai kualitas dalam setiap pembelian.</p>
                     </div>
                     <div className={style.content_layout_2}>
                         <img src={alfamart} width="100%" alt="alfamart pic" />
