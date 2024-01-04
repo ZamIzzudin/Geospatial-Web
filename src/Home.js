@@ -29,8 +29,10 @@ export default function Home() {
                 </video>
             </section>
             <section className={style.content_1}>
-                <h1>WHAT DO YOU NEED?</h1>
-                <p>Drink? Food? Snack? Coffe? Ice Cream? Justice?</p>
+                <div className={style.content_1_container}>
+                    <h1>WHAT DO YOU NEED?</h1>
+                    <p>Drink? Food? Snack? Coffe? Ice Cream? Justice?</p>
+                </div>
             </section>
             <section className={style.content_2}>
                 <div className={style.content_layout}>
